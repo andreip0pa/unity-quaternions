@@ -13,8 +13,13 @@ public class RotateEverything : MonoBehaviour {
 	}
     float i1=0, i2=0, i3=0, i4=0;
     public Text text;
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    public void Quit()
+    {
+      //  gameObject.transform.localScale += new Vector3(1, 1, 1);
+        Application.Quit();
+    }
+    void Update () {
         text.text = gameObject.transform.localRotation.ToString() + "        " + gameObject.transform.localEulerAngles.ToString()+"               "+i1.ToString()+" "+i2.ToString()+" "+i3.ToString()+" "+i4.ToString();
       
         {
